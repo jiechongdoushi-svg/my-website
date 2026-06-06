@@ -386,21 +386,86 @@ section {
 .about-avatar {
     width: 180px;
     height: 180px;
-    border-radius: 24px;
-    background: var(--gradient-hero);
+    border-radius: 28px;
+    background: linear-gradient(160deg, #5B8DEF 0%, #6C63FF 40%, #4EC9E8 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4.5rem;
     position: relative;
     z-index: 1;
+    overflow: hidden;
+}
+
+/* 头像内部的脸部图案 */
+.avatar-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 眼睛容器 */
+.avatar-eyes {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 10px;
+}
+
+/* 眼睛 — 豆豆眼 */
+.avatar-eye {
+    width: 16px;
+    height: 18px;
+    border-radius: 50%;
+    background: #1a1a3e;
+    position: relative;
+}
+
+/* 眼睛高光 */
+.avatar-eye::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    top: 3px;
+    right: 3px;
+}
+
+/* 嘴巴 — 小弧线 */
+.avatar-mouth {
+    width: 28px;
+    height: 12px;
+    border-bottom: 3px solid #1a1a3e;
+    border-radius: 0 0 14px 14px;
+}
+
+/* 腮红 */
+.avatar-blush {
+    position: absolute;
+    width: 22px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 150, 150, 0.35);
+    bottom: 52px;
+}
+
+.avatar-blush.left {
+    left: 36px;
+}
+
+.avatar-blush.right {
+    right: 36px;
 }
 
 .about-avatar-glow {
     position: absolute;
     inset: -6px;
-    border-radius: 28px;
-    background: var(--gradient-hero);
+    border-radius: 33px;
+    background: linear-gradient(160deg, #5B8DEF, #6C63FF, #4EC9E8);
     filter: blur(16px);
     opacity: 0.4;
     animation: glow-pulse 3s ease-in-out infinite;
@@ -914,7 +979,35 @@ section {
     .about-avatar {
         width: 140px;
         height: 140px;
-        font-size: 3.5rem;
+    }
+
+    .avatar-eyes {
+        gap: 20px;
+    }
+
+    .avatar-eye {
+        width: 13px;
+        height: 14px;
+    }
+
+    .avatar-mouth {
+        width: 22px;
+        height: 10px;
+        border-bottom-width: 2px;
+    }
+
+    .avatar-blush {
+        width: 16px;
+        height: 10px;
+        bottom: 38px;
+    }
+
+    .avatar-blush.left {
+        left: 28px;
+    }
+
+    .avatar-blush.right {
+        right: 28px;
     }
 }
 
