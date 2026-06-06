@@ -9,14 +9,14 @@
 </head>
 <body>
 
-    <!-- ==================== 网格背景 ==================== -->
+    <!-- 背景网格 -->
     <div id="grid-bg"></div>
 
-    <!-- ==================== 导航栏 ==================== -->
+    <!-- ==================== 导航 ==================== -->
     <header class="nav" id="nav">
         <div class="nav-inner">
             <a href="#home" class="nav-brand">
-                <span class="dot"></span> AI_HUB
+                <span class="dot"></span>AI_HUB
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">首页</a></li>
@@ -32,7 +32,7 @@
         </div>
     </header>
 
-    <!-- ==================== 英雄区 ==================== -->
+    <!-- ==================== 首屏 ==================== -->
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-badge">
@@ -42,17 +42,17 @@
                 探索 <span class="gradient-text">AI</span> 的世界
             </h1>
             <p class="hero-desc">
-                汇集 <span class="highlight">主流 AI 模型</span> 入口，<span class="highlight">从零开始的教程</span>，<br>
+                汇集 <em>主流 AI 模型</em> 入口，<em>从零开始的教程</em>，<br>
                 以及一群和你一样对 AI 充满好奇的伙伴。<br>
                 无论你身处何地，都能找到属于自己的 AI 之路 🚀
             </p>
             <div class="hero-actions">
-                <a href="#tutorial" class="btn btn-primary">📖 开始学习</a>
-                <a href="#tools" class="btn btn-outline">🔧 找 AI 工具</a>
-                <a href="#community" class="btn btn-outline">💬 加入交流</a>
+                <a href="#tutorial" class="btn btn-blue">📖 开始学习</a>
+                <a href="#tools" class="btn btn-ghost">🔧 找 AI 工具</a>
+                <a href="#community" class="btn btn-ghost">💬 加入交流</a>
             </div>
-            <div class="typing-line">
-                <span>$ </span> connecting to AI world<span>.</span><span>.</span><span>.</span><span class="cursor"></span>
+            <div class="hero-terminal">
+                <span>$ connecting to AI world</span><span class="cursor"></span>
             </div>
         </div>
     </section>
@@ -60,13 +60,10 @@
     <!-- ==================== AI 工具导航 ==================== -->
     <section id="tools">
         <div class="container">
-            <div class="section-header center">
-                <span class="section-label">▸ AI Tools Directory</span>
-                <h2 class="section-title">AI 模型 & 工具导航</h2>
-                <p class="section-subtitle">
-                    一页聚合主流 AI 工具，标注了国内是否可访问。
-                    点击卡片直接跳转 👇
-                </p>
+            <div class="sec-header center">
+                <span class="sec-label">AI Tools Directory</span>
+                <h2 class="sec-title">AI 模型 & 工具导航</h2>
+                <p class="sec-desc">一页聚合主流 AI 工具，标注国内访问情况，点击卡片直接跳转 👇</p>
             </div>
             <div class="tools-grid" id="toolsContainer">
                 <p style="color:var(--text-muted);text-align:center;padding:2rem;">⏳ 加载工具列表...</p>
@@ -74,15 +71,13 @@
         </div>
     </section>
 
-    <!-- ==================== 小白入门教程 ==================== -->
+    <!-- ==================== 小白教程 ==================== -->
     <section id="tutorial">
         <div class="container">
-            <div class="section-header center">
-                <span class="section-label">▸ Beginner Guide</span>
-                <h2 class="section-title">小白 AI 入门指南</h2>
-                <p class="section-subtitle">
-                    写给身在国内、对 AI 感兴趣但不知从何下手的你
-                </p>
+            <div class="sec-header center">
+                <span class="sec-label">Beginner Guide</span>
+                <h2 class="sec-title">小白 AI 入门指南</h2>
+                <p class="sec-desc">写给身在国内、对 AI 感兴趣但不知从何下手的你</p>
             </div>
 
             <div class="tutorial-layout">
@@ -92,25 +87,24 @@
                     <ol>
                         <li><a href="#step1">认识 AI：它能做什么</a></li>
                         <li><a href="#step2">国内直接能用的 AI</a></li>
-                        <li><a href="#step3">需要梯子的 AI（及如何解决）</a></li>
+                        <li><a href="#step3">需要梯子的 AI</a></li>
                         <li><a href="#step4">选择合适的 AI 工具</a></li>
-                        <li><a href="#step5">从提问开始：Prompt 入门</a></li>
-                        <li><a href="#step6">进阶：AI 编程 & 学习</a></li>
-                        <li><a href="#step7">安全与隐私注意事项</a></li>
-                        <li><a href="#step8">保持学习，加入社区</a></li>
+                        <li><a href="#step5">Prompt 提问入门</a></li>
+                        <li><a href="#step6">进阶：AI 编程</a></li>
+                        <li><a href="#step7">安全与隐私</a></li>
+                        <li><a href="#step8">保持学习</a></li>
                     </ol>
                 </nav>
 
-                <!-- 教程内容 -->
+                <!-- 教程正文 -->
                 <div class="tutorial-body">
 
-                    <!-- 第1步 -->
                     <div class="tutorial-step" id="step1">
                         <div class="tutorial-step-header">
                             <span class="tutorial-step-num">1</span>
                             <h3>认识 AI：它能做什么？</h3>
                         </div>
-                        <p>2024-2026 年，AI 已经不再是科幻电影里的东西。现在的 AI（大语言模型 / LLM）可以：</p>
+                        <p>2024-2026 年，AI（大语言模型 / LLM）已经不再是科幻电影里的东西。现在的 AI 可以：</p>
                         <ul>
                             <li><strong>💬 对话聊天</strong> — 像和人聊天一样提问，获得回答</li>
                             <li><strong>📝 写作辅助</strong> — 写文章、改文案、翻译、润色、总结</li>
@@ -121,144 +115,131 @@
                         </ul>
                         <p>你不需要懂技术——只要能打字提问，就能用 AI。</p>
                         <div class="tip-box">
-                            <strong>💡 核心认知：</strong>AI 是你的"超级实习生"——它能帮你做很多事情，但需要你来指挥和判断。学会提问，是所有 AI 技能里最重要的一项。
+                            <strong>💡 核心认知：</strong>AI 是你的「超级实习生」——它能帮你做很多事情，但需要你来指挥和判断。学会提问，是所有 AI 技能里最重要的一项。
                         </div>
                     </div>
 
-                    <!-- 第2步 -->
                     <div class="tutorial-step" id="step2">
                         <div class="tutorial-step-header">
                             <span class="tutorial-step-num">2</span>
                             <h3>国内直接能用的 AI（无需梯子 🎉）</h3>
                         </div>
-                        <p>好消息是，2025-2026 年国产 AI 模型突飞猛进，很多已经达到甚至超越了国际水平。以下是<strong>国内直接访问、完全免费或部分免费</strong>的选择：</p>
+                        <p>好消息是，2025-2026 年国产 AI 模型突飞猛进，很多已经达到甚至超越了国际水平：</p>
                         <ul>
-                            <li><strong>🐋 DeepSeek</strong>（chat.deepseek.com）— ⭐ 首推！性能比肩 GPT-4，完全免费，网页和 App 都有。国产最强。</li>
-                            <li><strong>🌙 Kimi</strong>（kimi.moonshot.cn）— 超长上下文，适合分析长文档、读论文。有浏览器插件。</li>
-                            <li><strong>☁️ 通义千问</strong>（tongyi.aliyun.com）— 阿里出品，多模态能力强，代码和图片都能处理。</li>
-                            <li><strong>🫘 豆包</strong>（doubao.com）— 字节跳动出品，移动端体验极好，支持语音对话。</li>
-                            <li><strong>📘 文心一言</strong>（yiyan.baidu.com）— 百度出品，中文理解好，和百度搜索深度整合。</li>
-                            <li><strong>🎓 智谱清言</strong>（chatglm.cn）— 清华系，学术背景强，推理和代码能力不错。</li>
+                            <li><strong>🐋 DeepSeek</strong>（chat.deepseek.com）— ⭐ 首推！性能比肩 GPT-4，完全免费，国产最强。</li>
+                            <li><strong>🌙 Kimi</strong>（kimi.moonshot.cn）— 超长上下文，适合分析长文档、读论文。</li>
+                            <li><strong>☁️ 通义千问</strong>（tongyi.aliyun.com）— 阿里出品，多模态能力强。</li>
+                            <li><strong>🫘 豆包</strong>（doubao.com）— 字节出品，移动端体验极好，支持语音对话。</li>
+                            <li><strong>📘 文心一言</strong>（yiyan.baidu.com）— 百度出品，中文理解好。</li>
+                            <li><strong>🎓 智谱清言</strong>（chatglm.cn）— 清华系，学术背景强。</li>
                         </ul>
                         <div class="tip-box">
-                            <strong>💡 建议：</strong>如果你刚入门，先注册 <strong>DeepSeek</strong> 和 <strong>Kimi</strong> 两个就够了。一个处理通用任务，一个处理长文档。都免费！
+                            <strong>💡 建议：</strong>先注册 <strong>DeepSeek</strong> 和 <strong>Kimi</strong> 两个就够了。一个通用，一个长文档。都免费！
                         </div>
                     </div>
 
-                    <!-- 第3步 -->
                     <div class="tutorial-step" id="step3">
                         <div class="tutorial-step-header">
                             <span class="tutorial-step-num">3</span>
-                            <h3>需要梯子的 AI（及如何解决）</h3>
+                            <h3>需要梯子的 AI（及解决方案）</h3>
                         </div>
-                        <p>国际主流 AI 工具（ChatGPT、Claude、Gemini、Cursor 等）在中国大陆无法直接访问。以下是几种解决方案：</p>
+                        <p>ChatGPT、Claude、Gemini 等在中国大陆无法直接访问。几种解决思路：</p>
                         <ul>
-                            <li><strong>🔮 方案 A：使用代理/梯子</strong> — 购买可靠的 VPN 或机场服务（月费约 ¥15-40）。推荐稳定的付费服务，免费的不稳定且不安全。</li>
-                            <li><strong>🔮 方案 B：使用 API 中转</strong> — 购买国内 API 中转服务（如 api2d、openai-sb 等），通过国内服务器调用国际模型，无需梯子。适合开发者。</li>
-                            <li><strong>🔮 方案 C：使用聚合平台</strong> — Poe（poe.com）聚合了多种模型，但同样需要梯子。不过只需访问一个网站，比来回切换方便。</li>
-                            <li><strong>🔮 方案 D：国产平替</strong> — 直接用 DeepSeek / Kimi / 通义千问，对大多数日常任务来说已经足够好了。这是最省事的方案。</li>
+                            <li><strong>🔮 方案 A：代理/VPN</strong> — 购买可靠的付费服务（月费 ¥15-40），不推荐免费的不稳定且不安全。</li>
+                            <li><strong>🔮 方案 B：API 中转</strong> — 国内中转服务（如 api2d），通过国内服务器调用国际模型，无需梯子。</li>
+                            <li><strong>🔮 方案 C：国产平替</strong> — 直接用 DeepSeek / Kimi，对大多数日常任务已经足够好。最省事。</li>
                         </ul>
                         <div class="tip-box">
-                            <strong>⚠️ 声明：</strong>以上信息仅供学习参考。请自行了解并遵守当地法律法规。VPN 的购买和使用需自行承担风险。对于大多数学习需求，<strong>国产 AI 已经足够</strong>，不一定要翻墙。
+                            <strong>⚠️ 声明：</strong>以上仅供学习参考。请遵守当地法律法规。对大多数学习需求，<strong>国产 AI 已经足够</strong>。
                         </div>
                     </div>
 
-                    <!-- 第4步 -->
                     <div class="tutorial-step" id="step4">
                         <div class="tutorial-step-header">
                             <span class="tutorial-step-num">4</span>
                             <h3>如何选择合适的 AI 工具？</h3>
                         </div>
-                        <p>面对这么多选择，看看哪种适合你：</p>
                         <ul>
                             <li><strong>🙋 日常聊天/学习/写作</strong> → DeepSeek（免费、国产、强大）</li>
                             <li><strong>📄 分析长文档/论文</strong> → Kimi（200万字上下文）</li>
                             <li><strong>💻 写代码/学编程</strong> → DeepSeek + Cursor（后者需梯子）</li>
                             <li><strong>🎨 画图/设计</strong> → 通义千问（支持图像生成）</li>
-                            <li><strong>🔍 AI 搜索</strong> → 秘塔 AI 搜索（metaso.cn）</li>
-                            <li><strong>🌍 追求最强体验</strong> → ChatGPT/Claude（需梯子）</li>
-                            <li><strong>🧪 想体验多种模型</strong> → Poe（需梯子，一个订阅全能用）</li>
+                            <li><strong>🔍 AI 搜索</strong> → 秘塔 AI 搜索（metaso.cn，国内直连）</li>
+                            <li><strong>🌍 追求最强体验</strong> → ChatGPT / Claude（需梯子）</li>
                         </ul>
                         <div class="tip-box">
-                            <strong>💡 省钱技巧：</strong>不要一上来就付费！先用免费的 DeepSeek 和 Kimi，用熟了觉得不够用再考虑付费工具。很多付费功能你现阶段根本用不上。
+                            <strong>💡 省钱技巧：</strong>不要一上来就付费！先用免费的 DeepSeek 和 Kimi，用熟了再考虑付费。
                         </div>
                     </div>
 
-                    <!-- 第5步 -->
                     <div class="tutorial-step" id="step5">
                         <div class="tutorial-step-header">
                             <span class="tutorial-step-num">5</span>
                             <h3>从提问开始：Prompt 入门</h3>
                         </div>
-                        <p>用 AI 的核心技能只有一个——<strong>会提问</strong>。以下是黄金公式：</p>
+                        <p>用 AI 的核心技能只有一个——<strong>会提问</strong>。黄金公式：</p>
                         <ul>
-                            <li><strong>❌ 差的提问：</strong>"帮我写篇文章。"</li>
-                            <li><strong>✅ 好的提问：</strong>"你是一名科技博主。请用通俗易懂的中文，写一篇 800 字左右的科普文章，向完全不懂 AI 的人介绍大语言模型是什么。要有生动的比喻，不要用太多术语。段落之间用 emoji 分隔。"</li>
+                            <li><strong>❌ 差的提问：</strong>「帮我写篇文章。」</li>
+                            <li><strong>✅ 好的提问：</strong>「你是一名科技博主。请用通俗易懂的中文，写一篇 800 字的科普，向完全不懂 AI 的人介绍大语言模型。要有生动的比喻，段落间用 emoji 分隔。」</li>
                         </ul>
-                        <p><strong>Prompt 黄金四要素：</strong></p>
+                        <p><strong>Prompt 四要素：</strong></p>
                         <ul>
-                            <li>1️⃣ <strong>角色</strong> — 让 AI 扮演谁？（专家/老师/博主/程序员…）</li>
-                            <li>2️⃣ <strong>任务</strong> — 要做什么？（写/翻译/分析/总结/代码…）</li>
-                            <li>3️⃣ <strong>约束</strong> — 有什么限制？（字数/格式/风格/语言…）</li>
-                            <li>4️⃣ <strong>示例</strong> — 给个参考？（"像这样写…"）</li>
+                            <li>1️⃣ <strong>角色</strong> — 让 AI 扮演谁？</li>
+                            <li>2️⃣ <strong>任务</strong> — 要做什么？</li>
+                            <li>3️⃣ <strong>约束</strong> — 什么限制？（字数/格式/风格）</li>
+                            <li>4️⃣ <strong>示例</strong> — 给参考（「像这样写…」）</li>
                         </ul>
                         <div class="tip-box">
-                            <strong>💡 进阶技巧：</strong>如果 AI 第一次回答不理想，不要放弃！继续补充说明，就像和一个实习生沟通一样。"不对，我要的不是这个意思，你再改一下 XXX"——多轮对话才是正确的使用方式。
+                            <strong>💡 进阶技巧：</strong>如果 AI 第一次回答不理想，继续补充说明——多轮对话才是正确使用方式。
                         </div>
                     </div>
 
-                    <!-- 第6步 -->
                     <div class="tutorial-step" id="step6">
                         <div class="tutorial-step-header">
                             <span class="tutorial-step-num">6</span>
                             <h3>进阶：AI 编程 & 学习路线</h3>
                         </div>
-                        <p>如果你想更进一步，用 AI 来学编程或开发自己的项目：</p>
                         <ul>
-                            <li><strong>🟢 入门级：</strong>让 DeepSeek/ChatGPT 教你 HTML/CSS/JavaScript，跟着一步步做。这个网站就是这么来的！</li>
-                            <li><strong>🟡 进阶级：</strong>用 Cursor（需梯子）或 GitHub Copilot 辅助写代码，效率提升 3-5 倍。</li>
-                            <li><strong>🔴 高级：</strong>用 Claude/ChatGPT 做代码审查、架构设计、Bug 排查。</li>
-                            <li><strong>📚 推荐学习路线：</strong>HTML/CSS → JavaScript → Node.js/Python → 数据库 → 部署运维</li>
+                            <li><strong>🟢 入门：</strong>让 DeepSeek/ChatGPT 教你 HTML/CSS/JS，跟着做。这个网站就是这么来的！</li>
+                            <li><strong>🟡 进阶：</strong>用 Cursor 或 GitHub Copilot 辅助写代码，效率翻倍。</li>
+                            <li><strong>🔴 高级：</strong>用 Claude 做代码审查、架构设计、Bug 排查。</li>
+                            <li><strong>📚 推荐路线：</strong>HTML/CSS → JavaScript → Node.js/Python → 数据库 → 部署</li>
                         </ul>
                         <div class="tip-box">
-                            <strong>💡 关键心态：</strong>AI 是加速器，不是替代品。用 AI 学编程 = 有个 24 小时在线的导师，但你还是得自己思考和练习。AI 写的代码你要逐行理解，否则永远学不会。
+                            <strong>💡 关键心态：</strong>AI 是加速器，不是替代品。AI 写的代码你要逐行理解，否则永远学不会。
                         </div>
                     </div>
 
-                    <!-- 第7步 -->
                     <div class="tutorial-step" id="step7">
                         <div class="tutorial-step-header">
                             <span class="tutorial-step-num">7</span>
                             <h3>安全与隐私注意事项</h3>
                         </div>
                         <ul>
-                            <li><strong>🔒 不要输入敏感信息</strong> — 密码、身份证号、银行卡号、公司机密等内容绝对不要发给 AI。</li>
-                            <li><strong>🔒 了解数据政策</strong> — 国产 AI 的数据存储在国内服务器，国际 AI 的数据可能在海外。根据内容敏感度选择合适的工具。</li>
-                            <li><strong>🔒 AI 会犯错</strong> — 不要完全信任 AI 的输出。尤其是医疗、法律、金融建议，一定要人工核实。</li>
-                            <li><strong>🔒 注意版权</strong> — AI 生成的内容版权归属复杂，商业用途需谨慎。</li>
-                            <li><strong>🔒 保护账号</strong> — 开启两步验证，不要和他人共享账号。</li>
+                            <li><strong>🔒 不要输入敏感信息</strong> — 密码、身份证、公司机密等绝对不要发给 AI。</li>
+                            <li><strong>🔒 AI 会犯错</strong> — 医疗、法律、金融建议一定要人工核实。</li>
+                            <li><strong>🔒 注意版权</strong> — AI 生成内容的版权归属复杂，商业用途需谨慎。</li>
+                            <li><strong>🔒 保护账号</strong> — 开启两步验证，不和他人共享账号。</li>
                         </ul>
                         <div class="tip-box">
-                            <strong>💡 记住一句话：</strong>AI 是你的助手，不是你的替代品。重要的决定，还是得靠自己的判断。
+                            <strong>💡 记住：</strong>AI 是你的助手，不是替代品。重要的决定，靠自己的判断。
                         </div>
                     </div>
 
-                    <!-- 第8步 -->
                     <div class="tutorial-step" id="step8">
                         <div class="tutorial-step-header">
                             <span class="tutorial-step-num">8</span>
                             <h3>保持学习，加入社区</h3>
                         </div>
-                        <p>AI 领域日新月异，保持学习的最好方式就是<strong>和同好交流</strong>：</p>
                         <ul>
-                            <li>📢 关注 AI 资讯账号（Twitter/X、知乎、公众号）</li>
+                            <li>📢 关注 AI 资讯（Twitter/X、知乎、公众号）</li>
                             <li>💬 加入 AI 交流群（见下方社区区域）</li>
-                            <li>📝 写学习笔记，输出倒逼输入（就像这个网站！）</li>
+                            <li>📝 写学习笔记，输出倒逼输入</li>
                             <li>🧪 动手尝试每一个新工具，实践出真知</li>
                             <li>🤝 帮助后来者——教是最好的学</li>
                         </ul>
                         <div class="tip-box">
-                            <strong>💡 这也是本网站存在的意义：</strong>让 AI 爱好者有一个可以学习、分享、交流的地方。往下滑，加入我们的社区 👇
+                            <strong>💡 这也是本网站存在的意义：</strong>让 AI 爱好者有一个学习、分享、交流的地方。往下滑，加入社区 👇
                         </div>
                     </div>
 
@@ -267,13 +248,13 @@
         </div>
     </section>
 
-    <!-- ==================== 最新文章 ==================== -->
+    <!-- ==================== 学习笔记 ==================== -->
     <section id="posts">
         <div class="container">
-            <div class="section-header center">
-                <span class="section-label">▸ Learning Notes</span>
-                <h2 class="section-title">AI 学习笔记</h2>
-                <p class="section-subtitle">记录学习过程，分享使用心得</p>
+            <div class="sec-header center">
+                <span class="sec-label">Learning Notes</span>
+                <h2 class="sec-title">AI 学习笔记</h2>
+                <p class="sec-desc">记录学习过程，分享使用心得</p>
             </div>
             <div class="posts-grid" id="postsContainer">
                 <p style="color:var(--text-muted);text-align:center;padding:2rem;">⏳ 加载中...</p>
@@ -281,56 +262,45 @@
         </div>
     </section>
 
-    <!-- ==================== 社区交流 ==================== -->
+    <!-- ==================== 社区 ==================== -->
     <section id="community">
         <div class="container">
-            <div class="section-header center">
-                <span class="section-label">▸ Community</span>
-                <h2 class="section-title">AI 爱好者社区</h2>
-                <p class="section-subtitle">学习、分享、交流——这里属于每一个 AI 探索者</p>
+            <div class="sec-header center">
+                <span class="sec-label">Community</span>
+                <h2 class="sec-title">AI 爱好者社区</h2>
+                <p class="sec-desc">学习、分享、交流——这里属于每一个 AI 探索者</p>
             </div>
 
             <div class="community-grid">
                 <div class="community-card fade-in">
-                    <div class="icon">💬</div>
+                    <span class="icon">💬</span>
                     <h3>讨论区</h3>
                     <p>在下方留言区提问、分享心得、交流技巧。你的每一个问题都可能帮到后来者。</p>
-                    <a href="#giscus-comments" class="btn btn-outline">👇 跳转到讨论区</a>
+                    <a href="#giscus-comments" class="btn btn-ghost btn-sm">👇 去讨论</a>
                 </div>
                 <div class="community-card fade-in">
-                    <div class="icon">📚</div>
+                    <span class="icon">📚</span>
                     <h3>资源共建</h3>
                     <p>发现好用的 AI 工具或教程？欢迎推荐！我们会持续更新工具导航和学习资源。</p>
-                    <a href="https://github.com/jiechongdoushi-svg/my-website" target="_blank" rel="noopener" class="btn btn-outline">去 GitHub 推荐</a>
+                    <a href="https://github.com/jiechongdoushi-svg/my-website" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">去 GitHub 推荐</a>
                 </div>
             </div>
 
-            <!-- Giscus 评论区 -->
-            <div class="giscus-wrapper fade-in" id="giscus-comments">
-                <h3 style="margin-bottom:1rem;text-align:center;">🗨️ AI 爱好者交流讨论</h3>
-                <p style="text-align:center;color:var(--text-secondary);margin-bottom:1.5rem;">你可以在这里提问、分享经验、讨论任何 AI 相关话题</p>
-
-                <!-- Giscus 脚本加载区 -->
-                <!--
-                    要启用评论功能，需要先设置 Giscus：
-                    1. 打开 https://github.com/apps/giscus 安装 Giscus App
-                    2. 在仓库 Settings → Features 中开启 Discussions
-                    3. 访问 https://giscus.app 获取配置代码
-                    4. 替换下方占位脚本
-                -->
-                <div id="giscus-container" style="min-height:200px;">
-                    <div class="setup-note" id="giscus-placeholder">
-                        <p style="margin-bottom:1rem;">🚧 <strong>评论区待启用</strong></p>
-                        <p style="font-size:0.9rem;margin-bottom:1.5rem;">站长正在配置 Giscus 评论系统，很快就能在这里交流了！</p>
-                        <div>
-                            <span class="step">1. 安装 Giscus App</span>
-                            <span class="step">2. 开启 Discussions</span>
-                            <span class="step">3. 评论区上线 ✨</span>
+            <!-- 评论区 -->
+            <div class="giscus-box fade-in" id="giscus-comments">
+                <h3>🗨️ AI 爱好者交流讨论</h3>
+                <p>在这里提问、分享、讨论任何 AI 相关话题</p>
+                <div id="giscus-container">
+                    <div class="giscus-placeholder" id="giscus-placeholder">
+                        <p style="margin-bottom:0.75rem;">🚧 <strong>评论区待启用</strong></p>
+                        <p style="font-size:0.85rem;margin-bottom:1rem;">站长正在配置评论系统，很快就能在这里交流了！</p>
+                        <div class="setup-steps">
+                            <span class="setup-step">1. 安装 Giscus App</span>
+                            <span class="setup-step">2. 开启 Discussions</span>
+                            <span class="setup-step">3. 评论区上线 ✨</span>
                         </div>
-                        <p style="margin-top:1.5rem;font-size:0.85rem;">
-                            💡 暂时可以去
-                            <a href="https://github.com/jiechongdoushi-svg/my-website/issues" target="_blank" rel="noopener" style="color:var(--primary);">GitHub Issues</a>
-                            留言交流
+                        <p style="margin-top:1rem;font-size:0.82rem;">
+                            暂时可去 <a href="https://github.com/jiechongdoushi-svg/my-website/issues" target="_blank" rel="noopener" style="color:var(--blue);">GitHub Issues</a> 留言
                         </p>
                     </div>
                 </div>
@@ -338,13 +308,13 @@
         </div>
     </section>
 
-    <!-- ==================== 关于我 ==================== -->
+    <!-- ==================== 关于 ==================== -->
     <section id="about">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">▸ About</span>
-                <h2 class="section-title">关于我</h2>
-                <p class="section-subtitle">一个正在 AI 世界里探索的新手</p>
+            <div class="sec-header">
+                <span class="sec-label">About</span>
+                <h2 class="sec-title">关于我</h2>
+                <p class="sec-desc">一个正在 AI 世界里探索的新手</p>
             </div>
             <div class="about-grid fade-in">
                 <div class="about-avatar-wrap">
@@ -363,15 +333,8 @@
                 </div>
                 <div class="about-text">
                     <h3>嗨，我是薯饼 👋</h3>
-                    <p>
-                        一个对 AI 充满好奇的探索者。我相信 AI 不应该只是少数人的玩具，
-                        而应该成为每个人都能使用的工具。
-                    </p>
-                    <p>
-                        这个网站是我的学习笔记，也是 AI 爱好者的小小驿站。
-                        从零开始学习，把过程中的每一个发现、每一份资源都分享出来。
-                        希望能帮助同样在 AI 之路上摸索的你。
-                    </p>
+                    <p>一个对 AI 充满好奇的探索者。我相信 AI 不应该只是少数人的玩具，而应该成为每个人都能使用的工具。</p>
+                    <p>这个网站是我的学习笔记，也是 AI 爱好者的小小驿站。从零开始学习，把过程中的每一个发现、每一份资源都分享出来。</p>
                     <div class="about-stats">
                         <div class="stat-item">
                             <span class="stat-number" data-target="16">0</span>
@@ -394,10 +357,10 @@
     <!-- ==================== 联系 ==================== -->
     <section id="contact">
         <div class="container">
-            <div class="section-header center">
-                <span class="section-label">▸ Contact</span>
-                <h2 class="section-title">联系 & 关注</h2>
-                <p class="section-subtitle">欢迎勾搭，一起聊 AI</p>
+            <div class="sec-header center">
+                <span class="sec-label">Contact</span>
+                <h2 class="sec-title">联系 & 关注</h2>
+                <p class="sec-desc">欢迎勾搭，一起聊 AI</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info fade-in">
@@ -415,13 +378,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="community-card fade-in">
-                    <div class="icon">📬</div>
+                <div class="newsletter-card fade-in">
+                    <span class="icon">📬</span>
                     <h3>订阅更新</h3>
                     <p>新工具、新教程、新文章上线时通知你</p>
-                    <form class="newsletter-form" id="newsletterForm" style="display:flex;gap:0.5rem;margin-top:1rem;">
-                        <input type="email" placeholder="你的邮箱地址" required style="flex:1;padding:0.7rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--text);font-size:0.9rem;font-family:inherit;outline:none;">
-                        <button type="submit" class="btn btn-primary">订阅</button>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="你的邮箱地址" required>
+                        <button type="submit" class="btn btn-blue btn-sm">订阅</button>
                     </form>
                 </div>
             </div>
@@ -439,13 +402,11 @@
             <a href="#about">关于</a>
         </div>
         <p>用 <span class="heart">❤</span> 和 AI 一起打造 · AI Learning Hub · 2026</p>
-        <p style="margin-top:0.25rem;font-size:0.78rem;">Powered by GitHub Pages · 薯饼的 AI 学习空间</p>
+        <p style="margin-top:0.2rem;font-size:0.75rem;opacity:0.6;">Powered by GitHub Pages · 薯饼的 AI 学习空间</p>
     </footer>
 
-    <!-- ==================== 回到顶部 ==================== -->
-    <button class="back-to-top" id="backToTop" title="回到顶部" aria-label="回到顶部">⬆</button>
+    <button class="back-to-top" id="backToTop" title="回到顶部" aria-label="回到顶部">↑</button>
 
-    <!-- ==================== 脚本 ==================== -->
     <script src="js/main.js"></script>
 </body>
 </html>

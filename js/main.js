@@ -37,24 +37,31 @@
             return;
         }
 
-        var tagClassMap = { vpn: 'tag-vpn', china: 'tag-china', free: 'tag-free', paid: 'tag-paid' };
+        var badgeMap = {
+            china: 'badge-cn',
+            vpn: 'badge-vpn',
+            free: 'badge-free',
+            paid: 'badge-paid'
+        };
 
         var html = '';
         tools.forEach(function (t) {
-            var tagCls = tagClassMap[t.tag] || 'tag-free';
+            var badgeCls = badgeMap[t.tag] || 'badge-free';
             html += ''
-                + '<a href="' + escapeHTML(t.url) + '" target="_blank" rel="noopener" class="tool-card fade-in" title="' + escapeHTML(t.description) + '">'
+                + '<a href="' + escapeHTML(t.url) + '" target="_blank" rel="noopener" class="tool-card fade-in">'
                 + '  <div class="tool-card-icon">' + (t.icon || '🔧') + '</div>'
-                + '  <div class="tool-card-info">'
+                + '  <div class="tool-card-body">'
                 + '    <h4>' + escapeHTML(t.name) + '</h4>'
                 + '    <p>' + escapeHTML(t.description) + '</p>'
-                + '    <span class="tool-card-tag ' + tagCls + '">' + escapeHTML(t.chinaAccess) + ' · ' + escapeHTML(t.price) + '</span>'
+                + '    <div class="tool-badges">'
+                + '      <span class="tool-badge ' + badgeCls + '">' + escapeHTML(t.chinaAccess) + '</span>'
+                + '      <span class="tool-badge badge-free">' + escapeHTML(t.price) + '</span>'
+                + '    </div>'
                 + '  </div>'
                 + '</a>';
         });
         container.innerHTML = html;
 
-        // 触发淡入动画
         setTimeout(checkFadeIn, 100);
     }
 
