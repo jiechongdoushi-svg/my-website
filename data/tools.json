@@ -1,0 +1,162 @@
+[
+    {
+        "name": "ChatGPT",
+        "description": "OpenAI 出品的旗舰模型，全球最流行的 AI 助手，支持 GPT-4o、DALL·E 绘图、代码解释器",
+        "url": "https://chat.openai.com",
+        "icon": "🤖",
+        "category": "国际大厂",
+        "chinaAccess": "需要梯子",
+        "price": "免费 + 付费",
+        "tag": "vpn"
+    },
+    {
+        "name": "Claude",
+        "description": "Anthropic 出品的 AI 助手，擅长长文写作、代码分析和深度思考，以安全和准确著称",
+        "url": "https://claude.ai",
+        "icon": "🧠",
+        "category": "国际大厂",
+        "chinaAccess": "需要梯子",
+        "price": "免费 + 付费",
+        "tag": "vpn"
+    },
+    {
+        "name": "Gemini",
+        "description": "Google 出品的多模态模型，深度整合 Google 生态，支持超长上下文",
+        "url": "https://gemini.google.com",
+        "icon": "💎",
+        "category": "国际大厂",
+        "chinaAccess": "需要梯子",
+        "price": "免费 + 付费",
+        "tag": "vpn"
+    },
+    {
+        "name": "DeepSeek",
+        "description": "国产之光！深度求索出品，性能比肩 GPT-4，完全免费，国内可直接使用",
+        "url": "https://chat.deepseek.com",
+        "icon": "🐋",
+        "category": "国产模型",
+        "chinaAccess": "国内直连",
+        "price": "完全免费",
+        "tag": "china"
+    },
+    {
+        "name": "Kimi (月之暗面)",
+        "description": "超长上下文（200万字），擅长读论文、分析长文档，国内体验极佳",
+        "url": "https://kimi.moonshot.cn",
+        "icon": "🌙",
+        "category": "国产模型",
+        "chinaAccess": "国内直连",
+        "price": "免费 + 付费",
+        "tag": "china"
+    },
+    {
+        "name": "通义千问 (Qwen)",
+        "description": "阿里巴巴出品，多模态能力强，支持代码生成、图片理解、文档处理",
+        "url": "https://tongyi.aliyun.com",
+        "icon": "☁️",
+        "category": "国产模型",
+        "chinaAccess": "国内直连",
+        "price": "免费 + 付费",
+        "tag": "china"
+    },
+    {
+        "name": "豆包 (字节跳动)",
+        "description": "字节跳动出品，集成在抖音体系内，移动端体验好，支持语音对话",
+        "url": "https://www.doubao.com",
+        "icon": "🫘",
+        "category": "国产模型",
+        "chinaAccess": "国内直连",
+        "price": "免费",
+        "tag": "china"
+    },
+    {
+        "name": "文心一言 (百度)",
+        "description": "百度出品，中文理解能力强，深度整合百度搜索和百度生态",
+        "url": "https://yiyan.baidu.com",
+        "icon": "📘",
+        "category": "国产模型",
+        "chinaAccess": "国内直连",
+        "price": "免费 + 付费",
+        "tag": "china"
+    },
+    {
+        "name": "智谱清言 (GLM)",
+        "description": "清华系出品，ChatGLM 系列模型，学术背景深厚，支持代码和推理",
+        "url": "https://chatglm.cn",
+        "icon": "🎓",
+        "category": "国产模型",
+        "chinaAccess": "国内直连",
+        "price": "免费 + 付费",
+        "tag": "china"
+    },
+    {
+        "name": "Cursor",
+        "description": "AI 编程编辑器，基于 VS Code，集成了 Claude 和 GPT-4，写代码效率翻倍",
+        "url": "https://cursor.sh",
+        "icon": "💻",
+        "category": "编程工具",
+        "chinaAccess": "需要梯子（注册）",
+        "price": "免费 + 付费",
+        "tag": "vpn"
+    },
+    {
+        "name": "GitHub Copilot",
+        "description": "GitHub 出品的 AI 编程助手，深度集成 VS Code / JetBrains，代码补全王者",
+        "url": "https://github.com/features/copilot",
+        "icon": "🐙",
+        "category": "编程工具",
+        "chinaAccess": "需要梯子",
+        "price": "付费（学生免费）",
+        "tag": "vpn"
+    },
+    {
+        "name": "Poe",
+        "description": "一站式 AI 聚合平台，一个订阅同时使用 ChatGPT、Claude、Gemini 等多种模型",
+        "url": "https://poe.com",
+        "icon": "🌐",
+        "category": "聚合平台",
+        "chinaAccess": "需要梯子",
+        "price": "免费 + 付费",
+        "tag": "vpn"
+    },
+    {
+        "name": "Perplexity",
+        "description": "AI 搜索引擎，实时搜索 + AI 总结，研究学习利器，可替代传统搜索引擎",
+        "url": "https://www.perplexity.ai",
+        "icon": "🔍",
+        "category": "搜索工具",
+        "chinaAccess": "需要梯子",
+        "price": "免费 + 付费",
+        "tag": "vpn"
+    },
+    {
+        "name": "Hugging Face",
+        "description": "AI 模型开源社区，全球最大的模型库，可免费使用和部署各类开源模型",
+        "url": "https://huggingface.co",
+        "icon": "🤗",
+        "category": "开发者资源",
+        "chinaAccess": "国内可访问（较慢）",
+        "price": "免费 + 付费",
+        "tag": "china"
+    },
+    {
+        "name": "秘塔 AI 搜索",
+        "description": "国产 AI 搜索引擎，无需梯子，实时搜索 + AI 总结，非常好用",
+        "url": "https://metaso.cn",
+        "icon": "🔎",
+        "category": "搜索工具",
+        "chinaAccess": "国内直连",
+        "price": "免费",
+        "tag": "china"
+    },
+    {
+        "name": "Monica",
+        "description": "浏览器 AI 插件，集成多种模型，划词翻译、总结、写作，即用即走",
+        "url": "https://monica.im",
+        "icon": "🧩",
+        "category": "效率插件",
+        "chinaAccess": "国内可访问",
+        "price": "免费 + 付费",
+        "tag": "china"
+    }
+]
