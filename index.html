@@ -3,468 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="我的个人主页 — 记录学习、分享思考、连接朋友">
     <title>我的个人主页</title>
-    <style>
-        /* ========== 基础设置 ========== */
-        :root {
-            --primary: #6C63FF;
-            --primary-dark: #5A52D5;
-            --bg: #0F0F1A;
-            --card-bg: #1A1A2E;
-            --text: #E8E8F0;
-            --text-secondary: #A0A0B8;
-            --border: #2A2A40;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        /* ========== 导航栏 ========== */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(15, 15, 26, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            padding: 0 2rem;
-        }
-
-        .nav-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 64px;
-        }
-
-        .nav-logo {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* ========== Hero 区域 ========== */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 6rem 2rem 4rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* 背景光晕动画 */
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(108, 99, 255, 0.15), transparent 70%);
-            top: -200px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-30px); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-        }
-
-        .hero-emoji {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #6C63FF, #E942A2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.85rem 2rem;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: #fff;
-        }
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--border);
-            color: var(--text);
-            background: transparent;
-        }
-        .btn-outline:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        /* ========== 通用区块 ========== */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3.5rem;
-        }
-
-        .section-header h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
-
-        .section-header p {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* ========== 关于我 ========== */
-        #about {
-            background: var(--card-bg);
-        }
-
-        .about-content {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .about-avatar {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #6C63FF, #E942A2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            flex-shrink: 0;
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 280px;
-        }
-
-        .about-text h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .about-text p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
-        }
-
-        /* ========== 技能 / 兴趣卡片 ========== */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .card:hover {
-            border-color: var(--primary);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(108, 99, 255, 0.1);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .card p {
-            color: var(--text-secondary);
-            font-size: 0.92rem;
-        }
-
-        /* ========== 联系我 ========== */
-        #contact {
-            background: var(--card-bg);
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            padding: 1rem 2rem;
-            border: 1px solid var(--border);
-            border-radius: 50px;
-            color: var(--text);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-
-        .contact-link:hover {
-            border-color: var(--primary);
-            background: rgba(108, 99, 255, 0.1);
-        }
-
-        /* ========== 页脚 ========== */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border);
-        }
-
-        footer span {
-            color: #E942A2;
-        }
-
-        /* ========== 响应式：手机端适配 ========== */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .hero .subtitle {
-                font-size: 1rem;
-            }
-            .nav-links {
-                gap: 1rem;
-            }
-            .nav-links a {
-                font-size: 0.85rem;
-            }
-            section {
-                padding: 3rem 1rem;
-            }
-        }
-    </style>
+    <!-- 主样式表 -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ===== 导航栏 ===== -->
-    <nav>
+    <!-- ==================== 粒子背景画布 ==================== -->
+    <canvas id="particles"></canvas>
+
+    <!-- ==================== 导航栏 ==================== -->
+    <header class="nav" id="nav">
         <div class="nav-inner">
-            <div class="nav-logo">✨ MySite</div>
-            <ul class="nav-links">
+            <a href="#home" class="nav-brand">
+                <span class="dot"></span> MySpace
+            </a>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">首页</a></li>
                 <li><a href="#about">关于</a></li>
                 <li><a href="#interests">兴趣</a></li>
+                <li><a href="#posts">文章</a></li>
                 <li><a href="#contact">联系</a></li>
             </ul>
+            <button class="theme-toggle" id="themeToggle" title="切换深色/浅色模式" aria-label="切换主题">☀️</button>
+            <button class="menu-btn" id="menuBtn" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- ===== Hero 首屏 ===== -->
+    <!-- ==================== 首屏 Hero ==================== -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <div class="hero-emoji">👋</div>
-            <h1>你好，我是 [你的名字]</h1>
-            <p class="subtitle">
-                欢迎来到我的个人主页！这里记录了我的学习、兴趣和生活中的点点滴滴。
-                我正在探索世界，创造属于自己的角落。
+            <div class="hero-badge">
+                <span class="blink"></span> 探索世界 · 创造角落
+            </div>
+            <h1 class="hero-title">
+                你好，我是<br><span class="gradient-text">[你的名字]</span>
+            </h1>
+            <p class="hero-desc">
+                欢迎来到我的数字花园 🌱<br>
+                这里记录着我的学习、思考和创作。<br>
+                从零开始，一步步打造属于自己的一方天地。
             </p>
-            <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary">了解更多</a>
-                <a href="#contact" class="btn btn-outline">联系我</a>
+            <div class="hero-actions">
+                <a href="#posts" class="btn btn-primary">📖 阅读文章</a>
+                <a href="#about" class="btn btn-outline">🙋 了解更多</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== 关于我 ===== -->
+    <!-- ==================== 关于我 ==================== -->
     <section id="about">
         <div class="container">
             <div class="section-header">
-                <h2>关于我</h2>
-                <p>一个正在学习和成长的探索者</p>
+                <span class="section-label">About</span>
+                <h2 class="section-title">关于我</h2>
+                <p class="section-subtitle">每一个大师，都曾经是小白</p>
             </div>
-            <div class="about-content">
-                <div class="about-avatar">🧑‍💻</div>
+            <div class="about-grid fade-in">
+                <div class="about-avatar-wrap">
+                    <div class="about-avatar-glow"></div>
+                    <div class="about-avatar">🧑‍💻</div>
+                </div>
                 <div class="about-text">
                     <h3>很高兴认识你！</h3>
                     <p>
-                        我是一名对技术和创作充满热情的新手。虽然刚刚起步，
-                        但我相信每一个大师都曾是小白。我正在学习建站、编程
+                        我是一个对技术和创作充满热情的新手。虽然刚刚起步，
+                        但我相信每一个大师都曾是小白。我正在学习网站开发、编程
                         以及各种有趣的技能。
                     </p>
                     <p>
                         这个网站是我探索数字世界的第一步。它会随着我的成长
-                        而不断进化——从今天这个简单的页面，到未来一个功能
-                        丰富的个人空间。
+                        而不断进化——从今天这个页面，到未来一个功能丰富的
+                        交流与分享社区。
                     </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="1">0+</span>
+                            <span class="stat-label">网站上线（天）</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="3">0+</span>
+                            <span class="stat-label">文章已发布</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="100">0+</span>
+                            <span class="stat-label">学习小时数</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== 兴趣爱好 ===== -->
+    <!-- ==================== 兴趣领域 ==================== -->
     <section id="interests">
         <div class="container">
-            <div class="section-header">
-                <h2>我的兴趣</h2>
-                <p>以下是我正在探索的领域</p>
+            <div class="section-header center">
+                <span class="section-label">Interests</span>
+                <h2 class="section-title">探索方向</h2>
+                <p class="section-subtitle">以下是我正在学习和深耕的领域</p>
             </div>
-            <div class="cards">
-                <div class="card">
-                    <div class="card-icon">🌐</div>
-                    <h3>网站开发</h3>
-                    <p>从零开始学习 HTML、CSS，打造属于自己的网页空间</p>
+            <div class="cards-grid">
+                <div class="card fade-in">
+                    <span class="card-icon">🌐</span>
+                    <h3>前端开发</h3>
+                    <p>HTML、CSS、JavaScript — 从网页结构到交互体验，打造用户看得到的一切</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🎨</div>
-                    <h3>创意设计</h3>
-                    <p>探索 UI 设计、配色方案，让东西变得好看又实用</p>
+                <div class="card fade-in">
+                    <span class="card-icon">⚙️</span>
+                    <h3>后端开发</h3>
+                    <p>未来将学习 Node.js、数据库，让网站拥有用户系统、数据处理能力</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">📚</div>
-                    <h3>持续学习</h3>
-                    <p>保持好奇心，每天学一点新东西，不断进步</p>
+                <div class="card fade-in">
+                    <span class="card-icon">🎨</span>
+                    <h3>UI / UX 设计</h3>
+                    <p>配色、排版、动效——让产品不仅好用，还要好看</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">☕</div>
-                    <h3>生活方式</h3>
-                    <p>分享日常、美食、旅行——认真生活，认真记录</p>
+                <div class="card fade-in">
+                    <span class="card-icon">💬</span>
+                    <h3>社区运营</h3>
+                    <p>未来打造交流分享社区，连接志同道合的人</p>
+                </div>
+                <div class="card fade-in">
+                    <span class="card-icon">📝</span>
+                    <h3>内容创作</h3>
+                    <p>写文章、做教程、分享心得——用输出倒逼输入</p>
+                </div>
+                <div class="card fade-in">
+                    <span class="card-icon">🚀</span>
+                    <h3>持续成长</h3>
+                    <p>每天进步一点点，保持好奇心，拥抱变化</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== 联系我 ===== -->
+    <!-- ==================== 最新文章 ==================== -->
+    <section id="posts">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">Blog</span>
+                <h2 class="section-title">最新文章</h2>
+                <p class="section-subtitle">记录学习过程，分享思考心得</p>
+            </div>
+            <div class="posts-grid" id="postsContainer">
+                <!-- 文章由 JS 从 data/posts.json 动态加载 -->
+                <p style="color:var(--text-muted);text-align:center;padding:2rem;">⏳ 加载中...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 成长时间线 ==================== -->
+    <section id="timeline">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">Journey</span>
+                <h2 class="section-title">成长足迹</h2>
+                <p class="section-subtitle">每一步，都算数</p>
+            </div>
+            <div class="timeline fade-in">
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-06-06</div>
+                    <div class="timeline-title">🚀 网站正式上线</div>
+                    <div class="timeline-desc">从零开始，使用 HTML + CSS + JS 搭建个人主页，并通过 GitHub Pages 部署上线</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">即将到来</div>
+                    <div class="timeline-title">📝 博客系统完善</div>
+                    <div class="timeline-desc">增加文章详情页、分类标签、搜索功能</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">即将到来</div>
+                    <div class="timeline-title">💬 评论与互动</div>
+                    <div class="timeline-desc">接入评论系统，让访问者可以留言交流</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">未来规划</div>
+                    <div class="timeline-title">🌟 社区平台</div>
+                    <div class="timeline-desc">用户注册登录、发帖分享、私信聊天——完整的社交平台</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 联系我 ==================== -->
     <section id="contact">
         <div class="container">
-            <div class="section-header">
-                <h2>联系我</h2>
-                <p>欢迎通过以下方式找到我</p>
+            <div class="section-header center">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">联系我</h2>
+                <p class="section-subtitle">欢迎勾搭，一起交流成长</p>
             </div>
-            <div class="contact-links">
-                <a href="mailto:your-email@example.com" class="contact-link">
-                    📧 发送邮件
-                </a>
-                <a href="#" class="contact-link">
-                    💬 微信
-                </a>
-                <a href="#" class="contact-link">
-                    🐦 社交媒体
-                </a>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>找到我</h3>
+                    <p>无论你是想交流技术、分享想法，还是单纯打声招呼——都很欢迎！</p>
+                    <div class="contact-links">
+                        <a href="mailto:jiechongdoushi@gmail.com" class="contact-link">
+                            <span class="icon">📧</span>
+                            <span>发送邮件</span>
+                        </a>
+                        <a href="https://github.com/jiechongdoushi-svg" target="_blank" rel="noopener" class="contact-link">
+                            <span class="icon">🐙</span>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#" class="contact-link">
+                            <span class="icon">💬</span>
+                            <span>微信（待添加）</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="newsletter-box fade-in">
+                    <h3>📬 订阅更新</h3>
+                    <p>留下邮箱，有新文章或重大更新时通知你（功能开发中）</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="your-email@example.com" required>
+                        <button type="submit" class="btn btn-primary">订阅</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== 页脚 ===== -->
-    <footer>
-        <p>用 <span>❤</span> 打造 · 我的第一个网站 · 2026</p>
+    <!-- ==================== 页脚 ==================== -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#home">首页</a>
+            <a href="#about">关于</a>
+            <a href="#posts">文章</a>
+            <a href="#contact">联系</a>
+        </div>
+        <p>用 <span class="heart">❤</span> 打造 · 我的个人空间 · 2026</p>
+        <p style="margin-top:0.25rem;font-size:0.78rem;">Powered by GitHub Pages</p>
     </footer>
 
+    <!-- ==================== 回到顶部 ==================== -->
+    <button class="back-to-top" id="backToTop" title="回到顶部" aria-label="回到顶部">⬆</button>
+
+    <!-- ==================== 主脚本 ==================== -->
+    <script src="js/main.js"></script>
 </body>
 </html>
