@@ -635,6 +635,63 @@ section { padding: 5rem 0; position: relative; z-index: 1; }
 }
 
 /* ========================================
+   加入我们
+   ======================================== */
+#join {
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-raised) 100%);
+    border-top: 1px solid var(--border);
+}
+
+#join .join-label { color: var(--rose); }
+#join .join-label::before { background: var(--rose); }
+
+.join-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem; margin-bottom: 2.5rem;
+}
+
+.join-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 1.75rem;
+    text-align: center;
+    transition: all var(--transition);
+}
+
+.join-card:hover {
+    border-color: rgba(244, 114, 182, 0.25);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.join-card-icon {
+    font-size: 2.5rem; margin-bottom: 0.75rem;
+    display: block;
+}
+
+.join-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+.join-card p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; }
+
+/* CTA 标语 */
+.join-cta {
+    background: linear-gradient(135deg, rgba(244, 114, 182, 0.06) 0%, rgba(96, 165, 250, 0.06) 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 2rem;
+    text-align: center;
+}
+
+.join-cta p {
+    font-size: 1.08rem; color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+}
+
+.join-cta p strong { color: var(--text); }
+.cta-highlight { color: var(--rose); font-weight: 800; font-size: 1.3rem; }
+
+/* ========================================
    关于区
    ======================================== */
 #about {
